@@ -10,7 +10,7 @@
     "build": "webpack -d && cp src/app/index.html dist/index.html && webpack-dev-server --hot --inline --colors --progress --content-base src/ --host 0.0.0.0 ",
     "build-prod": "webpack -p && cp src/app/index.html dist/index.html",
     "lint": "esw webpack.config.* src tools --color",
-    "lint:watch": "npm run lint -- --watch",
+    "lint:watch": "npm run lint -- --watch"
   },
   "repository": {
     "type": "git",

@@ -1,15 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
-class SimpleComponent extends React.Component {
-   render() {
-        return (
-            <div>{this.props.message}</div>
-        );
-   }
-}
+import Editor from './editor/Editor';
 
 ReactDOM.render(
-    <SimpleComponent message="React Demo" />,
+    <Editor message="React Demo" />,
     document.querySelector( '.js-app' )
 );
