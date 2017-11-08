@@ -3,6 +3,6 @@ import ReactDOM from 'react-dom';
 import Editor from './editor/Editor';
 
 ReactDOM.render(
-    <Editor message="React Demo" />,
+    <Editor />,
     document.querySelector( '.js-app' )
 );
