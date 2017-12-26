@@ -16,11 +16,16 @@ export default class Editor extends React.Component {
         })
     }
 
+    evaluate = (e) => {
+        e.preventDefault();
+        this.props.evaluate(this.state.code)
+    }
+
     render() {
         const options = {
             lineNumbers: true
         }
-        return (
+        return <div>
             <CodeMirror
                 value={this.state.code}
                 options={{
@@ -28,6 +33,7 @@ export default class Editor extends React.Component {
                 }}
                 onChange={this.updateCode}
             />
-        );
+            <button onClick={this.evaluate}>Evaluate</button>
+        </div>
     }
 }
