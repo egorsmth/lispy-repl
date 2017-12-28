@@ -19,5 +19,6 @@ from backend import views as bk
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^evaluate/$', bk.evaluate),
     url(r'^', bk.index),
 ]
