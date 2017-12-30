@@ -117,11 +117,11 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
-STATIC_ROOT = os.path.join(BASE_DIR, 'dist')
+STATIC_ROOT = BASE_DIR
 STATIC_URL = '/dist/'
 
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))  # heroku
 
-# STATICFILES_DIRS = (
-#     os.path.join(BASE_DIR, 'dist'),
-# )
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'dist'),
+)
