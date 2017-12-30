@@ -24,7 +24,7 @@ SECRET_KEY = '+i1^04^on!8e0c_i+jlkmtyf0(yq7i1pc%r_y^8503g6#p0p$b'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', 'intense-forest-66943.herokuapp.com']
+ALLOWED_HOSTS = ['localhost', 'powerful-ocean-18985.herokuapp.com']
 
 # Application definition
 
