@@ -10,7 +10,8 @@
     "build": "webpack -d && cp src/app/index.html dist/index.html",
     "build-prod": "webpack -p && cp src/app/index.html dist/index.html",
     "lint": "esw webpack.config.* src tools --color",
-    "lint:watch": "npm run lint -- --watch"
+    "lint:watch": "npm run lint -- --watch",
+    "heroku-postbuild": "webpack -p --progress && cp src/app/index.html dist/index.html"
   },
   "repository": {
     "type": "git",
