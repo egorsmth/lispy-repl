@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "homemade lispy repl",
   "main": "index.js",
+  "engines": {
+    "npm": "5.5.1"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "babel": "babel",
