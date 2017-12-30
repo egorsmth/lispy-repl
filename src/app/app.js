@@ -45,7 +45,7 @@ class App extends React.Component {
 
     render() {
         const style = {
-            width: '49%',
+            width: '55%',
             float: 'right',
         }
 

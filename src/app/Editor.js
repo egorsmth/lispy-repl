@@ -29,7 +29,7 @@ export default class Editor extends React.Component {
             lineNumbers: true
         }
         const style = {
-             width: '49%',
+             width: '45%',
              float: 'left',
              height: '100%',
         }
