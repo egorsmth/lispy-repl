@@ -1,0 +1,15 @@
+@import '~codemirror/lib/codemirror.css';
+@import '~codemirror/theme/material.css';
+
+html, body {
+    height: 100%;
+    margin: 0px;
+}
+#app, .ReactCodeMirror, .CodeMirror  {
+    height: 100%;
+}
+#eval-btn {
+    position: absolute;
+    bottom: 10px;
+    left: 30px;
+}

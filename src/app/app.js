@@ -2,9 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Editor from './Editor';
 import Output from './Output';
-require('codemirror/lib/codemirror.css');
+import Help from './Help';
+import './editor.css';
 import Cookies from 'js-cookie'
-
 
 class App extends React.Component {
     constructor(props) {
@@ -44,10 +44,19 @@ class App extends React.Component {
     }
 
     render() {
-        return <div>
-            <Editor evaluate={this.evaluate}/>
-            <Output>{this.state.result}</Output>
-        </div>
+        const style = {
+            width: '49%',
+            float: 'right',
+        }
+
+        return [
+            <Editor evaluate={this.evaluate}/>,
+            <div style={style}>
+                <Output>{this.state.result}</Output>
+                <Help />
+            </div>
+
+        ]
     }
 }
 

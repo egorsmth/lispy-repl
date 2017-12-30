@@ -1,5 +1,6 @@
 import React from 'react';
 import CodeMirror from 'react-codemirror'
+require('codemirror/mode/commonlisp/commonlisp');
 
 export default class Editor extends React.Component {
    
@@ -27,7 +28,12 @@ export default class Editor extends React.Component {
         const options = {
             lineNumbers: true
         }
-        return <div style={{width: '49%', float: 'left'}}>
+        const style = {
+             width: '49%',
+             float: 'left',
+             height: '100%',
+        }
+        return <div style={style}>
             <CodeMirror
                 value={this.state.code}
                 options={{
@@ -38,7 +44,7 @@ export default class Editor extends React.Component {
                 }}
                 onChange={this.updateCode}
             />
-            <button onClick={this.evaluate}>Evaluate</button>
+            <button id='eval-btn' onClick={this.evaluate}>Evaluate</button>
         </div>
     }
 }

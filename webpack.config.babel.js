@@ -2,7 +2,7 @@ import path from 'path'
 import webpack from 'webpack'
 import ExtractTextPlugin from 'extract-text-webpack-plugin'
 
-const extractSass = new ExtractTextPlugin({
+const extractText = new ExtractTextPlugin({
   filename: "styles.css",
 });
 
@@ -29,19 +29,14 @@ export default {
             },
             {
                 test: /\.css$/,
-                use: extractSass.extract({
+                use: ExtractTextPlugin.extract({
                     fallback: 'style-loader',
-                    //resolve-url-loader may be chained before sass-loader if necessary
-                    use: [{
-                        loader: "css-loader" // translates CSS into CommonJS
-                    }, {
-                        loader: "sass-loader" // compiles Sass to CSS
-                    }]
+                    use: "css-loader"
                 })
             }
         ]
     },
     plugins: [
-        extractSass
+        extractText
     ]
 };

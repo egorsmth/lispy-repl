@@ -16,16 +16,22 @@ def index(request):
 def evaluate(request):
     print(request.POST)
     code = request.POST['code']
-    parsed = parse_lispy(code)
-    evaled, err = eval_lispy(parsed)
-    if err is None:
-        resp = {
-            'result': 'success',
-            'out': evaled,
-        }
-    else:
-        resp = {
+    try:
+        parsed = parse_lispy(code)
+        evaled, err = eval_lispy(parsed)
+        if err is None:
+            resp = {
+                'result': 'success',
+                'out': evaled,
+            }
+        else:
+            resp = {
+                'result': 'error',
+                'out': err
+            }
+        return JsonResponse(resp)
+    except Exception as e:
+        JsonResponse({
             'result': 'error',
-            'out': err
-        }
-    return JsonResponse(resp)
+            'out': e.__str__()
+        })
