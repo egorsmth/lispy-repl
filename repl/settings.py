@@ -121,6 +121,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'dist')
 STATIC_URL = '/dist/'
 
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))  # heroku
+
 # STATICFILES_DIRS = (
 #     os.path.join(BASE_DIR, 'dist'),
 # )
