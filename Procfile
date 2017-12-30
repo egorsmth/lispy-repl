@@ -1,1 +1,1 @@
-web: gunicorn lispyrepl.wsgi --log-file -
+web: gunicorn repl.wsgi --log-file -
