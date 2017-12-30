@@ -1,1 +1,1 @@
-web: gunicorn repl.wsgi --log-file -
+web: npm run build && gunicorn repl.wsgi --log-file -
