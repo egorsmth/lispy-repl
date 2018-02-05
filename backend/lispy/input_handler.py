@@ -92,7 +92,6 @@ def tokenize(string):
 
 def parse(string, level=0):
     string = string.strip(' \n\r')
-    print(string)
     length = len(string)
     if length == 0:
         return EmptyList()

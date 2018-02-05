@@ -253,7 +253,7 @@ def eval_lisp(l, e):
 def eval_lispy(parsed):
     e = Env()
     try:
-        res = eval_lisp(parsed, e)
+        res = show(eval_lisp(parsed, e))
         return res, None
-    except Exception as inst:
-        return None, inst
+    except Exception as err:
+        return None, err

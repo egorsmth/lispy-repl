@@ -19,6 +19,7 @@ def evaluate(request):
     try:
         parsed = parse_lispy(code)
         evaled, err = eval_lispy(parsed)
+        print('ok', type(evaled))
         if err is None:
             resp = {
                 'result': 'success',
@@ -31,7 +32,7 @@ def evaluate(request):
             }
         return JsonResponse(resp)
     except Exception as e:
-        JsonResponse({
+        return JsonResponse({
             'result': 'error',
             'out': e.__str__()
         })
