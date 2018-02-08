@@ -44,18 +44,12 @@ class App extends React.Component {
     }
 
     render() {
-        const style = {
-            width: '55%',
-            float: 'right',
-        }
-
         return [
             <Editor evaluate={this.evaluate}/>,
-            <div style={style}>
+            <div id="right-block">
                 <Output>{this.state.result}</Output>
                 <Help />
             </div>
-
         ]
     }
 }

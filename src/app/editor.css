@@ -5,6 +5,13 @@ html, body {
     height: 100%;
     margin: 0px;
 }
+
+#editor-wrapper {
+    width: 45%;
+    float: left;
+    height: 100%;
+}
+
 #app, .ReactCodeMirror, .CodeMirror  {
     height: 100%;
 }
@@ -12,4 +19,24 @@ html, body {
     position: absolute;
     bottom: 10px;
     left: 30px;
+}
+
+#right-block {
+    width: 55%;
+    height: 100%;
+    float: right;
+}
+
+#help-block {
+    height: 73%;
+    padding: 10px;
+    overflow-y: scroll;
+}
+
+
+#output {
+    height: 20%;
+    padding: 10px;
+    background-color: #ccccff;
+    font-size: 25px;
 }

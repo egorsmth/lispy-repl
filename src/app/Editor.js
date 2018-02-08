@@ -28,12 +28,8 @@ export default class Editor extends React.Component {
         const options = {
             lineNumbers: true
         }
-        const style = {
-             width: '45%',
-             float: 'left',
-             height: '100%',
-        }
-        return <div style={style}>
+
+        return <div id="editor-wrapper">
             <CodeMirror
                 value={this.state.code}
                 options={{

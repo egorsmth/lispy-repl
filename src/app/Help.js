@@ -32,6 +32,8 @@ function that returns function:\n
     ))\n
     ((x) 5)  // call function x and pass 5 to returned function\n
 `
-        return <ReactMarkdown source={input} />
+        return <div id="help-block">
+        <ReactMarkdown source={input} />
+        </div>
     }
 }
